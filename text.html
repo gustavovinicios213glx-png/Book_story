@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Título do Livro — Página de Venda</title>
+  <meta name="description" content="Página oficial de venda do livro. Substitua este texto pela descrição curta do seu livro." />
+  <!-- Open Graph (melhor compartilhamento em redes) -->
+  <meta property="og:title" content="TÍTULO DO LIVRO" />
+  <meta property="og:description" content="Uma breve frase que capture o leitor." />
+  <meta property="og:image" content="cover.jpg" />
+  <meta property="og:type" content="book" />  <style>
+    :root{--accent:#7c3aed;--bg:#0f172a;--card:#0b1220;--muted:#94a3b8}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.4;margin:0;background:linear-gradient(180deg,#071029 0%, #07122a 100%);color:#e6eef8}
+    .container{max-width:980px;margin:40px auto;padding:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:16px;padding:28px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
+    .cover{width:100%;border-radius:10px;overflow:hidden;box-shadow:0 6px 20px rgba(12,17,40,0.6)}
+    .cover img{width:100%;height:auto;display:block}
+    h1{font-size:28px;margin:0 0 8px}
+    .sub{color:var(--muted);margin-bottom:18px}
+    .desc{background:rgba(255,255,255,0.02);padding:16px;border-radius:10px;color:#dbeafe}
+    .price{font-weight:700;font-size:22px;margin:12px 0}
+    .btn{display:inline-block;padding:14px 20px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#5b21b6);color:white;text-decoration:none;font-weight:600;box-shadow:0 8px 24px rgba(124,58,237,0.18)}
+    .meta{margin-top:16px;color:var(--muted);font-size:14px}
+    .features{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .chip{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;font-size:13px;color:#cbe4ff}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.cover{max-width:280px;margin:0 auto}}
+  </style></head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="grid">
+        <main>
+          <!-- Substitua os textos abaixo pelo conteúdo do seu livro -->
+          <h1 id="book-title">Quando o Mundo Acalma</h1>
+          <div class="sub">Um livro sobre ansiedade, cura e pequenos passos para encontrar paz.</div><div class="desc" id="book-description">
+        <!-- Aqui cole a descrição curta do seu livro (2–4 frases) -->
+        <p>Existem dias em que a gente sente que o mundo ficou grande demais. Este livro acompanha Dani em sua jornada para entender a ansiedade, aprender a respirar e redescobrir pequenas pazes cotidianas.</p>
+      </div>
+
+      <section style="margin-top:18px">
+        <h3 style="margin:0 0 8px">O que você vai encontrar aqui</h3>
+        <div class="features">
+          <div class="chip">Capítulos curtos e humanos</div>
+          <div class="chip">Exercícios práticos</div>
+          <div class="chip">Leitura reconfortante</div>
+        </div>
+      </section>
+
+      <section style="margin-top:18px">
+        <h3 style="margin:0 0 8px">Trecho</h3>
+        <p style="color:#dbeafe">"Respire um pouco. Você não está danificado. Você está tentando sobreviver. E isso, por si só, já é corajoso."</p>
+      </section>
+
+    </main>
+
+    <aside>
+      <div class="cover">
+        <!-- Substitua o arquivo cover.jpg pela URL da sua capa -->
+        <img id="cover-image" src="cover.jpg" alt="Capa do livro" />
+      </div>
+
+      <div style="margin-top:12px">
+        <div class="price" id="price">R$ 29,90</div>
+
+        <!-- COLOQUE AQUI SEU LINK DE CHECKOUT DA KIWIFY -->
+        <a id="buy-button" class="btn" href="#" target="_blank">Comprar agora</a>
+
+        <div class="meta">Entrega: download instantâneo (PDF).<br/>Envio por e-mail após pagamento.</div>
+      </div>
+
+      <footer>
+        <div style="margin-top:12px">Autor: Seu Nome</div>
+        <div style="margin-top:6px;color:var(--muted);font-size:13px">Contato: seuemail@exemplo.com</div>
+      </footer>
+    </aside>
+  </div>
+</div>
+
+  </div>  <!-- Pequeno script para facilitar edição: substitua os valores abaixo com os seus. -->  <script>
+    // === PERSONALIZE AQUI ===
+    const KIWIFY_LINK = 'https://pay.kiwify.com.br/Vini_Guzta'; // coloque seu link de checkout
+    const COVER_URL = 'cover.jpg'; // coloque a URL pública da capa (ou nome de arquivo se subir junto)
+    const BOOK_TITLE = 'Quando o Mundo Acalma';
+    const BOOK_DESC = 'Uma jornada sensível sobre ansiedade, cura e os pequenos passos que nos salvam.';
+    const PRICE_TEXT = 'R$ 6,99';
+    const AUTHOR = 'Gustavo Vinicius';
+    const CONTACT = 'gustavovinicios213glx@gmail.com';
+
+    // === NÃO PRECISA MEXER ABAIXO SE NÃO QUISER ===
+    document.getElementById('buy-button').href = KIWIFY_LINK;
+    document.getElementById('cover-image').src = COVER_URL;
+    document.getElementById('book-title').textContent = BOOK_TITLE;
+    document.getElementById('book-description').querySelector('p').textContent = BOOK_DESC;
+    document.getElementById('price').textContent = PRICE_TEXT;
+    document.querySelector('footer div').textContent = 'Autor: ' + AUTHOR;
+    document.querySelectorAll('footer div')[1].textContent = 'Contato: ' + CONTACT;
+  </script></body>
+</html>
